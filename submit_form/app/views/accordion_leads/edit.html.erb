@@ -1,0 +1,164 @@
+<h1>Editing accordion_lead</h1>
+
+<% form_for(@accordion_lead) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :phone_area %><br />
+    <%= f.text_field :phone_area %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :ampm %><br />
+    <%= f.text_field :ampm %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :loed %><br />
+    <%= f.text_field :loed %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </p>
+  <p>
+    <%= f.label :institution_url %><br />
+    <%= f.text_field :institution_url %>
+  </p>
+  <p>
+    <%= f.label :timezone %><br />
+    <%= f.text_field :timezone %>
+  </p>
+  <p>
+    <%= f.label :program_name %><br />
+    <%= f.text_field :program_name %>
+  </p>
+  <p>
+    <%= f.label :institution_name %><br />
+    <%= f.text_field :institution_name %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :abtest_version %><br />
+    <%= f.text_field :abtest_version %>
+  </p>
+  <p>
+    <%= f.label :adspace_id %><br />
+    <%= f.text_field :adspace_id %>
+  </p>
+  <p>
+    <%= f.label :career_choice %><br />
+    <%= f.text_area :career_choice %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :processed %><br />
+    <%= f.text_field :processed %>
+  </p>
+  <p>
+    <%= f.label :teach_cert %><br />
+    <%= f.text_field :teach_cert %>
+  </p>
+  <p>
+    <%= f.label :phone2 %><br />
+    <%= f.text_field :phone2 %>
+  </p>
+  <p>
+    <%= f.label :phone2_area %><br />
+    <%= f.text_field :phone2_area %>
+  </p>
+  <p>
+    <%= f.label :major %><br />
+    <%= f.text_field :major %>
+  </p>
+  <p>
+    <%= f.label :minor %><br />
+    <%= f.text_field :minor %>
+  </p>
+  <p>
+    <%= f.label :citizen_or_pr %><br />
+    <%= f.text_field :citizen_or_pr %>
+  </p>
+  <p>
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </p>
+  <p>
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :begin_time %><br />
+    <%= f.text_field :begin_time %>
+  </p>
+  <p>
+    <%= f.label :accordion_id %><br />
+    <%= f.text_field :accordion_id %>
+  </p>
+  <p>
+    <%= f.label :counselor_code %><br />
+    <%= f.text_field :counselor_code %>
+  </p>
+  <p>
+    <%= f.label :user_ip_number %><br />
+    <%= f.text_field :user_ip_number %>
+  </p>
+  <p>
+    <%= f.label :user_ip_country %><br />
+    <%= f.text_field :user_ip_country %>
+  </p>
+  <p>
+    <%= f.label :employer %><br />
+    <%= f.text_field :employer %>
+  </p>
+  <p>
+    <%= f.label :projected_start %><br />
+    <%= f.text_field :projected_start %>
+  </p>
+  <p>
+    <%= f.label :recruiting %><br />
+    <%= f.text_field :recruiting %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @accordion_lead %> |
+<%= link_to 'Back', accordion_leads_path %>

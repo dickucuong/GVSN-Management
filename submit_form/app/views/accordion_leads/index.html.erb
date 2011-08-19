@@ -1,0 +1,94 @@
+<h1>Listing accordion_leads</h1>
+
+<table>
+  <tr>
+    <th>Phone area</th>
+    <th>State</th>
+    <th>Ampm</th>
+    <th>Phone</th>
+    <th>Loed</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Source</th>
+    <th>Email</th>
+    <th>Time</th>
+    <th>Institution url</th>
+    <th>Timezone</th>
+    <th>Program name</th>
+    <th>Institution name</th>
+    <th>Zip</th>
+    <th>Abtest version</th>
+    <th>Adspace</th>
+    <th>Career choice</th>
+    <th>Country</th>
+    <th>Processed</th>
+    <th>Teach cert</th>
+    <th>Phone2</th>
+    <th>Phone2 area</th>
+    <th>Major</th>
+    <th>Minor</th>
+    <th>Citizen or pr</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>Age</th>
+    <th>Begin time</th>
+    <th>Accordion</th>
+    <th>Counselor code</th>
+    <th>User ip number</th>
+    <th>User ip country</th>
+    <th>Employer</th>
+    <th>Projected start</th>
+    <th>Recruiting</th>
+  </tr>
+
+<% @accordion_leads.each do |accordion_lead| %>
+  <tr>
+    <td><%=h accordion_lead.phone_area %></td>
+    <td><%=h accordion_lead.state %></td>
+    <td><%=h accordion_lead.ampm %></td>
+    <td><%=h accordion_lead.phone %></td>
+    <td><%=h accordion_lead.loed %></td>
+    <td><%=h accordion_lead.first_name %></td>
+    <td><%=h accordion_lead.last_name %></td>
+    <td><%=h accordion_lead.source %></td>
+    <td><%=h accordion_lead.email %></td>
+    <td><%=h accordion_lead.time %></td>
+    <td><%=h accordion_lead.institution_url %></td>
+    <td><%=h accordion_lead.timezone %></td>
+    <td><%=h accordion_lead.program_name %></td>
+    <td><%=h accordion_lead.institution_name %></td>
+    <td><%=h accordion_lead.zip %></td>
+    <td><%=h accordion_lead.abtest_version %></td>
+    <td><%=h accordion_lead.adspace_id %></td>
+    <td><%=h accordion_lead.career_choice %></td>
+    <td><%=h accordion_lead.country %></td>
+    <td><%=h accordion_lead.processed %></td>
+    <td><%=h accordion_lead.teach_cert %></td>
+    <td><%=h accordion_lead.phone2 %></td>
+    <td><%=h accordion_lead.phone2_area %></td>
+    <td><%=h accordion_lead.major %></td>
+    <td><%=h accordion_lead.minor %></td>
+    <td><%=h accordion_lead.citizen_or_pr %></td>
+    <td><%=h accordion_lead.address1 %></td>
+    <td><%=h accordion_lead.address2 %></td>
+    <td><%=h accordion_lead.city %></td>
+    <td><%=h accordion_lead.age %></td>
+    <td><%=h accordion_lead.begin_time %></td>
+    <td><%=h accordion_lead.accordion_id %></td>
+    <td><%=h accordion_lead.counselor_code %></td>
+    <td><%=h accordion_lead.user_ip_number %></td>
+    <td><%=h accordion_lead.user_ip_country %></td>
+    <td><%=h accordion_lead.employer %></td>
+    <td><%=h accordion_lead.projected_start %></td>
+    <td><%=h accordion_lead.recruiting %></td>
+    <td><%= link_to 'Show', accordion_lead %></td>
+    <td><%= link_to 'Edit', edit_accordion_lead_path(accordion_lead) %></td>
+    <td><%= link_to 'Destroy', accordion_lead, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New accordion_lead', new_accordion_lead_path %>

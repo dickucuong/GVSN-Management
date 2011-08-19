@@ -1,0 +1,1288 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (144.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (169.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccordionLeads (20110727020901)
+  [4;36;1mSQL (153.7ms)[0m   [0;1mCREATE TABLE `accordion_leads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `phone_area` varchar(255), `state` varchar(255), `ampm` varchar(255), `phone` varchar(255), `loed` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `source` varchar(255), `email` varchar(255), `time` varchar(255), `institution_url` varchar(255), `timezone` varchar(255), `program_name` varchar(255), `institution_name` varchar(255), `zip` varchar(255), `abtest_version` varchar(255), `adspace_id` varchar(255), `career_choice` text, `country` varchar(255), `processed` int(11), `teach_cert` int(11), `phone2` varchar(255), `phone2_area` varchar(255), `major` varchar(255), `minor` varchar(255), `citizen_or_pr` int(11), `address1` varchar(255), `address2` varchar(255), `city` varchar(255), `age` int(11), `begin_time` varchar(255), `accordion_id` int(11), `counselor_code` varchar(255), `user_ip_number` varchar(255), `user_ip_country` varchar(255), `employer` varchar(255), `projected_start` varchar(255), `recruiting` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (49.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110727020901')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `accordion_leads`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `accordion_leads`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:10:45) [GET]
+  [4;36;1mAccordionLead Load (0.5ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 62ms (View: 54, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#new (for 127.0.0.1 at 2011-07-27 09:10:52) [GET]
+  [4;36;1mAccordionLead Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/new
+Completed in 59ms (View: 49, DB: 2) | 200 OK [http://localhost/accordion_leads/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#create (for 127.0.0.1 at 2011-07-27 09:19:32) [POST]
+  Parameters: {"accordion_lead"=>{"city"=>"Ho Chi Minh", "address1"=>"Ho Chi Minh", "address2"=>"Ho Chi Minh", "zip"=>"", "phone_area"=>"+84", "counselor_code"=>"stage", "country"=>"Vietnam", "ampm"=>"AMPM", "abtest_version"=>"", "career_choice"=>"Choise any career", "time"=>"", "projected_start"=>"", "begin_time"=>"", "major"=>"Information", "teach_cert"=>"Teach cert", "processed"=>"", "adspace_id"=>"1", "timezone"=>"", "user_ip_number"=>"123456", "phone2"=>"12345678", "loed"=>"Loed", "employer"=>"Cuong Le-Cao", "institution_name"=>"", "last_name"=>"Le-Cao", "phone"=>"123456789", "recruiting"=>"12", "institution_url"=>"www.institution.url", "user_ip_country"=>"12345", "accordion_id"=>"1", "age"=>"24", "citizen_or_pr"=>"Vietnamese", "source"=>"www.google.com", "minor"=>"Economy", "phone2_area"=>"+38", "program_name"=>"Master", "email"=>"cuonglc@gmail.com", "first_name"=>"Cuong", "state"=>"Ho Chi Minh"}, "commit"=>"Create", "authenticity_token"=>"5EYK1vjfyVLVwpN5J6/fOpaEc+LPa3nFTtNxK2/wPew="}
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAccordionLead Create (0.6ms)[0m   [0mINSERT INTO `accordion_leads` (`address1`, `city`, `phone_area`, `zip`, `created_at`, `address2`, `ampm`, `country`, `counselor_code`, `abtest_version`, `updated_at`, `time`, `career_choice`, `timezone`, `adspace_id`, `processed`, `teach_cert`, `major`, `begin_time`, `projected_start`, `loed`, `phone2`, `user_ip_number`, `phone`, `last_name`, `institution_name`, `employer`, `institution_url`, `recruiting`, `source`, `citizen_or_pr`, `age`, `accordion_id`, `user_ip_country`, `state`, `first_name`, `email`, `program_name`, `phone2_area`, `minor`) VALUES('Ho Chi Minh', 'Ho Chi Minh', '+84', '', '2011-07-27 02:19:32', 'Ho Chi Minh', 'AMPM', 'Vietnam', 'stage', '', '2011-07-27 02:19:32', '', 'Choise any career', '', '1', NULL, 0, 'Information', '', '', 'Loed', '12345678', '123456', '123456789', 'Le-Cao', '', 'Cuong Le-Cao', 'www.institution.url', 12.0, 'www.google.com', 0, 24, 1, '12345', 'Ho Chi Minh', 'Cuong', 'cuonglc@gmail.com', 'Master', '+38', 'Economy')[0m
+  [4;36;1mSQL (47.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:5555/accordion_leads/19
+Completed in 73ms (DB: 51) | 302 Found [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#show (for 127.0.0.1 at 2011-07-27 09:19:32) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mAccordionLead Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+  [4;36;1mAccordionLead Load (0.5ms)[0m   [0;1mSELECT * FROM `accordion_leads` WHERE (`accordion_leads`.`id` = 19) [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/show
+Completed in 29ms (View: 18, DB: 3) | 200 OK [http://localhost/accordion_leads/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:19:37) [GET]
+  [4;35;1mAccordionLead Load (0.6ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:23:40) [GET]
+  [4;35;1mAccordionLead Load (0.2ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 26ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:23:49) [GET]
+  [4;35;1mAccordionLead Load (0.2ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 26ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:23:51) [GET]
+  [4;35;1mAccordionLead Load (0.2ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:24:01) [GET]
+  [4;35;1mAccordionLead Load (0.3ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:24:02) [GET]
+  [4;35;1mAccordionLead Load (0.2ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:24:03) [GET]
+  [4;35;1mAccordionLead Load (0.2ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:24:05) [GET]
+  [4;35;1mAccordionLead Load (0.2ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:57:09) [GET]
+  [4;35;1mAccordionLead Load (0.6ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 09:57:14) [GET]
+  [4;35;1mAccordionLead Load (0.2ms)[0m   [0mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;36;1mAccordionLead Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#new (for 127.0.0.1 at 2011-07-27 10:01:35) [GET]
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/new
+Completed in 49ms (View: 40, DB: 2) | 200 OK [http://localhost/accordion_leads/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:20:43) [GET]
+  [4;36;1mAccordionLead Load (0.6ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 86ms (View: 77, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:20:54) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 26ms (View: 18, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:20:55) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:21:20) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:21:23) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:21:24) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:21:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:21:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:21:30) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:25:23) [GET]
+  [4;36;1mAccordionLead Load (0.6ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 26ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:25:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:32:55) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:32:59) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:33:00) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:49:36) [GET]
+  [4;36;1mAccordionLead Load (0.6ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:49:40) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:49:41) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:49:42) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:43) [GET]
+  [4;36;1mAccordionLead Load (8.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 37ms (View: 21, DB: 11) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:54) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:55) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:55) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:56) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:57) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:57) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:57) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:58) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:58) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:58) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:50:59) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:00) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:01) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:01) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:03) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:04) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:04) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:05) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:05) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 85ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:06) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:06) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:06) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:07) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:07) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:08) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:08) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:09) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:09) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 88ms (View: 80, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:10) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:10) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:11) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:11) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:11) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:12) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:12) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:12) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:13) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:13) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:13) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:14) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:14) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:14) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:14) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:15) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:15) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:15) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:19) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:19) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:20) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:21) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:21) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:22) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:23) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:23) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:24) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:24) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 84ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:24) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:24) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:24) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:25) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:25) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 26ms (View: 18, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:25) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 85ms (View: 74, DB: 5) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:26) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:27) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:27) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:27) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:27) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:28) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:29) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:29) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 85ms (View: 77, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:30) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:31) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:31) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:32) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:33) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:33) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 10:51:35) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 13:43:43) [GET]
+  [4;36;1mAccordionLead Load (0.6ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 13:43:47) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-27 13:44:09) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-28 16:58:58) [GET]
+  [4;36;1mAccordionLead Load (0.8ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 193ms (View: 185, DB: 3) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-28 16:59:27) [GET]
+  [4;36;1mAccordionLead Load (0.2ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/accordion_leads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-28 17:02:51) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-28 17:02:52) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-28 17:03:04) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 55ms (View: 47, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-07-28 17:03:06) [GET]
+  [4;36;1mAccordionLead Load (0.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#new (for 127.0.0.1 at 2011-07-28 17:03:17) [GET]
+  [4;36;1mAccordionLead Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `accordion_leads`[0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/new
+Completed in 61ms (View: 52, DB: 2) | 200 OK [http://localhost/accordion_leads/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (73.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccordionLeads (20110727020901)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'accordion_leads' already exists: CREATE TABLE `accordion_leads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `phone_area` varchar(255), `state` varchar(255), `ampm` varchar(255), `phone` varchar(255), `loed` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `source` varchar(255), `email` varchar(255), `time` varchar(255), `institution_url` varchar(255), `timezone` varchar(255), `program_name` varchar(255), `institution_name` varchar(255), `zip` varchar(255), `abtest_version` varchar(255), `adspace_id` varchar(255), `career_choice` text, `country` varchar(255), `processed` int(11), `teach_cert` int(11), `phone2` varchar(255), `phone2_area` varchar(255), `major` varchar(255), `minor` varchar(255), `citizen_or_pr` int(11), `address1` varchar(255), `address2` varchar(255), `city` varchar(255), `age` int(11), `begin_time` varchar(255), `accordion_id` int(11), `counselor_code` varchar(255), `user_ip_number` varchar(255), `user_ip_country` varchar(255), `employer` varchar(255), `projected_start` varchar(255), `recruiting` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccordionLeadsController#index (for 127.0.0.1 at 2011-08-19 14:16:34) [GET]
+  [4;36;1mAccordionLead Load (15.3ms)[0m   [0;1mSELECT * FROM `accordion_leads` [0m
+Rendering template within layouts/accordion_leads
+Rendering accordion_leads/index
+  [4;35;1mAccordionLead Columns (30.7ms)[0m   [0mSHOW FIELDS FROM `accordion_leads`[0m
+Completed in 227ms (View: 175, DB: 46) | 200 OK [http://localhost/]
